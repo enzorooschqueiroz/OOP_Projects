@@ -8,7 +8,6 @@ public class Aplic {
     public static void main(String[] args) {
         double medAlt, medBase;
         int opcao;
-        Retangulo objRet = new Retangulo();
         String unidade;
         Scanner entrada = new Scanner(System.in);
         
@@ -19,7 +18,7 @@ public class Aplic {
         //criação do ponteiro,
         //instanciação(alocação) de um objeto da classe Retangulo
         //e chamada do método construtor
-       
+        Retangulo objRet = new Retangulo(unidade);
         
         System.out.print("Digite a medida da altura: ");
         medAlt = entrada.nextDouble();
@@ -39,17 +38,17 @@ public class Aplic {
              opcao = entrada.nextInt();             
              
              switch(opcao){ //passagem de mensagens
-                 case 1 : System.out.println("\n\nMedida da Altura: " + objRet.getAltura());
-                          System.out.println("Medida da Base: " + objRet.getBase());
-                          System.out.println("A medida da área: " + objRet.calcArea());
+                 case 1 : System.out.println("\n\nMedida da Altura: " + objRet.getAltura() + objRet.getUniMed());
+                          System.out.println("Medida da Base: " + objRet.getBase() + objRet.getUniMed());
+                          System.out.println("A medida da área: " + objRet.calcArea()+ objRet.getUniMed() + '²');
                           break;
-                 case 2 : System.out.println("\n\nMedida da Altura: " + objRet.getAltura());
-                          System.out.println("Medida da Base: " + objRet.getBase());
-                          System.out.println("A medida do perímetro: " + objRet.calcPerimetro());
+                 case 2 : System.out.println("\n\nMedida da Altura: " + objRet.getAltura()+ objRet.getUniMed());
+                          System.out.println("Medida da Base: " + objRet.getBase()+ objRet.getUniMed());
+                          System.out.println("A medida do perímetro: " + objRet.calcPerimetro()+ objRet.getUniMed());
                           break;
-                 case 3 : System.out.println("\n\nMedida da Altura: " + objRet.getAltura());
-                          System.out.println("Medida da Base: " + objRet.getBase());
-                          System.out.println("A medida da diagonal: " + objRet.calcDiagonal());
+                 case 3 : System.out.println("\n\nMedida da Altura: " + objRet.getAltura()+ objRet.getUniMed());
+                          System.out.println("Medida da Base: " + objRet.getBase()+ objRet.getUniMed());
+                          System.out.println("A medida da diagonal: " + objRet.calcDiagonal()+ objRet.getUniMed());
              }
         }while (opcao < 4);
     }    
